@@ -1,9 +1,14 @@
+import viteLogo from '../public/vite.svg'
+
 const Contact = async () => {
     const view = `
+    <img src="${viteLogo}" class="logo" alt="Vite logo" />
     <h1>Contact me!</h1>
     <div class="hero">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo assumenda sit laudantium fuga temporibus, debitis voluptates exercitationem corporis ducimus laboriosam earum necessitatibus vel, sunt ipsam incidunt cum aliquam at impedit</p>
-        <a href="/">Go back Home!</a>
+        <div class="card">
+            <a href="/">Go back Home!</a>
+        </div>
     </div>
     `;
     return view;
