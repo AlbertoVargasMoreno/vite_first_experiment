@@ -13,7 +13,7 @@
     <div class="hero">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo assumenda sit laudantium fuga temporibus, debitis voluptates exercitationem corporis ducimus laboriosam earum necessitatibus vel, sunt ipsam incidunt cum aliquam at impedit</p>
         <div class="card">
-            <a href="/" type="button">Go back Home!</a>
+            <a href="/vite_first_experiment/" type="button">Go back Home!</a>
         </div>
     </div>
     `,m={"/":l,"/contact":d},r=async()=>{const i=document.getElementById("app");let o=p(),s=m[o];i.innerHTML=await s()},p=()=>`/${location.hash.slice(1).toLocaleLowerCase().split("/")[1]||""}`;window.addEventListener("load",r);window.addEventListener("hashchange",r);
