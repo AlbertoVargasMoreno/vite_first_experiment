@@ -7,7 +7,7 @@
             <a href="#/contact" type="button">Go to Contact!</a>
         </div>
     </div>
-    `,u="/assets/vite-DcBtz0py.svg",d=async()=>`
+    `,u="/vite_first_experiment/assets/vite-DcBtz0py.svg",d=async()=>`
     <img src="${u}" class="logo" alt="Vite logo" />
     <h1>Contact me!</h1>
     <div class="hero">
