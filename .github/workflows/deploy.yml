@@ -7,11 +7,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: production
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@master
 
       - name: Install dependecies
         run: npm install
@@ -22,9 +21,10 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: peaceiris/actions-github-pages@v3
         with:
           branch: gh-pages
           folder: dist
           token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public
 
