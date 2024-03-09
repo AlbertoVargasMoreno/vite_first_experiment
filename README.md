@@ -25,3 +25,4 @@ created with:
 
 - https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions
 
+- https://vitejs.dev/guide/static-deploy.html#github-pages
