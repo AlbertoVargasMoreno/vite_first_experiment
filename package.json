@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "vite": {
+	  "base":"/vite_first_experiment/"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
