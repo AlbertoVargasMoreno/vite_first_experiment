@@ -7,7 +7,6 @@ import Character from "../pages/Character";
 const routes = {
     '': Home,
     'contact': Contact,
-    '1': Character
 };
 
 const router = async () => {
@@ -18,7 +17,12 @@ const router = async () => {
         let render = routes[page];
         mainContainer.innerHTML = await render();
     } catch (error) {
-        mainContainer.innerHTML = await NotFound();
+        try {
+            mainContainer.innerHTML = await Character();
+        } catch (error) {
+            console.error(error);
+            mainContainer.innerHTML = await NotFound();
+        }
     }
 }
 
