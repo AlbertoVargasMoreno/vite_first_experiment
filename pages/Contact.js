@@ -7,7 +7,7 @@ const Contact = async () => {
     <div class="hero">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo assumenda sit laudantium fuga temporibus, debitis voluptates exercitationem corporis ducimus laboriosam earum necessitatibus vel, sunt ipsam incidunt cum aliquam at impedit</p>
         <div class="card">
-            <a href="${import.meta.env.BASE_URL}" type="button">Go back Home!</a>
+            <a href="#/" type="button">Go back Home!</a>
         </div>
     </div>
     `;
