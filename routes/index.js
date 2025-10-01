@@ -1,10 +1,13 @@
+import getHash from "../utils/getHash";
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import NotFound from '../pages/NotFound';
+import Character from "../pages/Character";
 
 const routes = {
-    '/': Home,
-    '/contact': Contact,
+    '': Home,
+    'contact': Contact,
+    '1': Character
 };
 
 const router = async () => {
@@ -17,11 +20,6 @@ const router = async () => {
     } catch (error) {
         mainContainer.innerHTML = await NotFound();
     }
-}
-
-const getHash = () => {
-    const pageName = location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '';
-    return `/${pageName}`;
 }
 
 export default router;
