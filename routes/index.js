@@ -1,5 +1,6 @@
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
+import NotFound from '../pages/NotFound';
 
 const routes = {
     '/': Home,
@@ -10,8 +11,12 @@ const router = async () => {
     const mainContainer = null || document.getElementById('app');
 
     let page = getHash();
-    let render = routes[page];
-    mainContainer.innerHTML = await render();
+    try {
+        let render = routes[page];
+        mainContainer.innerHTML = await render();
+    } catch (error) {
+        mainContainer.innerHTML = await NotFound();
+    }
 }
 
 const getHash = () => {
