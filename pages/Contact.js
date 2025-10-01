@@ -1,4 +1,4 @@
-import viteLogo from '../vite.svg'
+import viteLogo from '../img/vite.svg'
 
 const Contact = async () => {
     const view = `

@@ -1,4 +1,4 @@
-import javascriptLogo from '../javascript.svg'
+import javascriptLogo from '../img/javascript.svg'
 
 const Home = async () => {
     const view = `
