@@ -1,6 +1,6 @@
 import javascriptLogo from '../img/javascript.svg'
 import fetchData from "../utils/fetchData";
-import HeroTemplate from "./HeroTemplate";
+import HeroTemplate from "../templates/HeroTemplate";
 
 const Home = async () => {
     const characters = await fetchData();

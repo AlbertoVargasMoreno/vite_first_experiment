@@ -1,6 +1,6 @@
 import getHash from "../utils/getHash";
 import fetchData from "../utils/fetchData";
-import HeroTemplate from "./HeroTemplate";
+import HeroTemplate from "../templates/HeroTemplate";
 
 const Character = async () => {
     const URI = getHash();
