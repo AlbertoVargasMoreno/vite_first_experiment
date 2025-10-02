@@ -19,6 +19,11 @@ created with:
 
 - Windows 1022H2
 
+installed and runned with:
+
+- Node v22.17.1
+- Windows 11 23H2
+
 ## deployment automation
 
 - https://docs.github.com/en/actions/quickstart
@@ -26,3 +31,9 @@ created with:
 - https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions
 
 - https://vitejs.dev/guide/static-deploy.html#github-pages
+
+## manual tests
+
+- click to show character Pages
+- click to redirect contact and home pages
+- attempt to render inexistent page, must render notFound page

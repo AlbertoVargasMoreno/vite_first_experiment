@@ -9,6 +9,7 @@ const routes = {
     'contact': Contact,
 };
 
+// todo: refactor router, nested tries are bad for scalibility
 const router = async () => {
     const mainContainer = null || document.getElementById('app');
 
