@@ -8,7 +8,7 @@ const Home = async () => {
     let charactersCards = ``;
     charactersArray.forEach(character => {
         charactersCards += `
-            <article class="Character-item">
+            <article class="Characters-item">
                 <a href="#/${character.id}" target="_blank" rel="noopener noreferrer">
                     <img src="${character.image}" alt="${character.name}" srcset="">
                     <h2> ${character.name} </h2>
@@ -25,7 +25,9 @@ const Home = async () => {
             <a href="#/contact" type="button">Go to Contact!</a>
         </div>
     </div>
-    ${charactersCards}
+    <div class="Characters">
+        ${charactersCards}
+    </div>
     `;
 
     return view;

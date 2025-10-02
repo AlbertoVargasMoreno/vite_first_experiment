@@ -7,7 +7,7 @@ const Character = async () => {
     const character = await fetchData(id);
 
     const view = `
-    <div class="Chracters-inner">
+    <div class="Characters-inner">
         <article class="Characters-card">
             <img src="${character.image}" alt="${character.name}">
             <h2>${character.name}</h2>
