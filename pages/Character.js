@@ -1,17 +1,19 @@
 import getHash from "../utils/getHash";
 import fetchData from "../utils/fetchData";
+import HeroTemplate from "./HeroTemplate";
 
 const Character = async () => {
     const URI = getHash();
     const id = URI;
     const character = await fetchData(id);
 
+    const heroSection = await HeroTemplate(
+        '',
+        '#/',
+        'Go to Home!'
+    );
     const view = `
-    <div class="hero">
-        <div class="card">
-            <a href="#/" type="button">Go to Home!</a>
-        </div>
-    </div>
+    ${heroSection}
     <div class="Characters-inner">
         <article class="Characters-card">
             <img src="${character.image}" alt="${character.name}">

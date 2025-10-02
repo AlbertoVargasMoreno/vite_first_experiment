@@ -1,5 +1,6 @@
 import javascriptLogo from '../img/javascript.svg'
 import fetchData from "../utils/fetchData";
+import HeroTemplate from "./HeroTemplate";
 
 const Home = async () => {
     const characters = await fetchData();
@@ -16,15 +17,15 @@ const Home = async () => {
             </article>
         `;
     });
+    const heroSection = await HeroTemplate(
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo assumenda sit laudantium fuga temporibus, debitis voluptates exercitationem corporis ducimus laboriosam earum necessitatibus vel, sunt ipsam incidunt cum aliquam at impedit",
+        '#/contact',
+        'Go to Contact!'
+    );
     const view = `
     <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     <h1>This the home page!</h1>
-    <div class="hero">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo assumenda sit laudantium fuga temporibus, debitis voluptates exercitationem corporis ducimus laboriosam earum necessitatibus vel, sunt ipsam incidunt cum aliquam at impedit</p>
-        <div class="card">
-            <a href="#/contact" type="button">Go to Contact!</a>
-        </div>
-    </div>
+    ${heroSection}
     <div class="Characters">
         ${charactersCards}
     </div>
