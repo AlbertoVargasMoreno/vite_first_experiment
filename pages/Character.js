@@ -7,6 +7,11 @@ const Character = async () => {
     const character = await fetchData(id);
 
     const view = `
+    <div class="hero">
+        <div class="card">
+            <a href="#/" type="button">Go to Home!</a>
+        </div>
+    </div>
     <div class="Characters-inner">
         <article class="Characters-card">
             <img src="${character.image}" alt="${character.name}">

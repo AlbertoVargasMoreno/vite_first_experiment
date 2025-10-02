@@ -9,7 +9,7 @@ const Home = async () => {
     charactersArray.forEach(character => {
         charactersCards += `
             <article class="Characters-item">
-                <a href="#/${character.id}" target="_blank" rel="noopener noreferrer">
+                <a href="#/${character.id}">
                     <img src="${character.image}" alt="${character.name}" srcset="">
                     <h2> ${character.name} </h2>
                 </a>
