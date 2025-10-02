@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "vite": {
-	  "base":"/vite_first_experiment/"
+    "base": "/vite_first_experiment/"
   },
   "scripts": {
     "dev": "vite",
@@ -13,5 +13,8 @@
   },
   "devDependencies": {
     "vite": "^5.1.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.0"
   }
 }
