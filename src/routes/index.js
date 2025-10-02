@@ -15,10 +15,29 @@ const router = async () => {
     let page = getHash();
     try {
         let render = routes[page];
-        mainContainer.innerHTML = await render();
+        const result = await render();
+        
+        // Handle both string and object results
+        if (typeof result === 'string') {
+            mainContainer.innerHTML = result;
+        } else {
+            mainContainer.innerHTML = result.html;
+            // Execute post-render initialization if provided
+            if (result.init && typeof result.init === 'function') {
+                result.init();
+            }
+        }
     } catch (error) {
         try {
-            mainContainer.innerHTML = await Character();
+            const result = await Character();
+            if (typeof result === 'string') {
+                mainContainer.innerHTML = result;
+            } else {
+                mainContainer.innerHTML = result.html;
+                if (result.init && typeof result.init === 'function') {
+                    result.init();
+                }
+            }
         } catch (error) {
             console.error(error);
             mainContainer.innerHTML = await NotFound();

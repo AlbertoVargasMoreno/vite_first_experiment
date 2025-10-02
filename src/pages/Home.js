@@ -2,6 +2,8 @@ import javascriptLogo from '../img/javascript.svg'
 import fetchData from "../utils/fetchData";
 import HeroTemplate from "../templates/HeroTemplate";
 import BarChart from "./BarChart.js";
+import { createPage } from "../utils/domUtils.js";
+import { initializeCharacterCards, initializeSearchFunctionality } from "../utils/interactiveElements.js";
 
 const Home = async () => {
     const characters = await fetchData();
@@ -23,8 +25,9 @@ const Home = async () => {
         '#/contact',
         'Go to Contact!'
     );
+    
     const chartId = 'acquisitions';
-    const view = `
+    const html = `
     <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     <h1>This the home page!</h1>
     <div class="chart-container" style="width: 800px; margin: 20px auto;">
@@ -36,11 +39,17 @@ const Home = async () => {
     </div>
     `;
 
-    setTimeout(() => {
+    // Initialize chart and other interactive elements
+    const initFunction = () => {
         BarChart(chartId, []);
-    }, 0);
+        initializeCharacterCards();
+        initializeSearchFunctionality();
+        // Add more interactive elements here as your app grows
+        // Example: initializeModalFunctionality();
+        // Example: initializeLazyLoading();
+    };
 
-    return view;
+    return createPage(html, initFunction, [`#${chartId}`, '.Characters-item']);
 }
 
 export default Home;
